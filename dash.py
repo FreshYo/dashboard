@@ -30,9 +30,9 @@ st.caption('Bailey P')
 
 st.sidebar.title("Filter data")
 
+country_list = st.sidebar.multiselect("Select a country", df['COUNTRY'].unique())
 productid_list = st.sidebar.multiselect("Select Product code", df['PRODUCTCODE'].unique())
 status_list = st.sidebar.multiselect("Select a status", df['STATUS'].unique())
-country_list = st.sidebar.multiselect("Select a country", df['COUNTRY'].unique())
 productline_list = st.sidebar.multiselect("Select a product", df['PRODUCTLINE'].unique())
 
 
