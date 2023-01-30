@@ -128,5 +128,8 @@ def create_barplot(df4,rev_count2):
     if rev_count2.empty==1:
         st.subheader('No Revenue Earned')
 
-rev_count2=df4.groupby(['PRODUCTLINE']).sum()['QUANTITYORDERED']
-create_barplot(df4,rev_count2)
+
+is_check = st.checkbox("Show the bar graph")
+if is_check:
+    rev_count2=df4.groupby(['PRODUCTLINE']).sum()['QUANTITYORDERED']
+    create_barplot(df4,rev_count2)
